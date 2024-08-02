@@ -1,4 +1,5 @@
-Quiz App
+###Quiz App
+
 ![image](https://github.com/user-attachments/assets/caa2310e-4861-4d93-ad8a-222613549777)
 
 This Quiz App is an interactive platform that allows users to test their knowledge through various questions. This application was built using React and utilizes external APIs to get quiz questions.
