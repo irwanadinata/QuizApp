@@ -8,7 +8,6 @@ This Quiz App is an interactive platform that allows users to test their knowled
 
 - User login feature.
 - Fetch quiz questions from [Open Trivia Database](https://opentdb.com/).
-- Displays a timer for all quizzes that is not reset when switching questions.
 - Displays quiz results which include the number of correct, incorrect answers and total questions.
 - Ability to continue the quiz if the page is closed.
 - Save user usernames in Local Storage.
