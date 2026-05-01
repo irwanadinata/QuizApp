@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { User } from "lucide-react";
 
-const UsernameDisplay = ({say}) => {
+const UsernameDisplay = ({ say }) => {
   const [username, setUsername] = useState("");
 
   useEffect(() => {
-    // Mengambil username dari local storage
     const storedUsername = localStorage.getItem("username");
     if (storedUsername) {
       setUsername(storedUsername);
@@ -12,8 +12,11 @@ const UsernameDisplay = ({say}) => {
   }, []);
 
   return (
-    <div className="text-end mb-4">
-      {username ? <h2 className="text-l font-semibold">{say}, {username}!</h2> : <h2 className="text-xl">{say}, Guest!</h2>}
+    <div className="flex items-center gap-2 text-slate-700 dark:text-slate-300 bg-white/60 dark:bg-white/5 w-fit px-4 py-2 rounded-full border border-slate-200 dark:border-white/10 shadow-sm dark:shadow-none transition-colors duration-500">
+      <User className="w-4 h-4 text-amber-500 dark:text-amber-400" />
+      <span className="font-medium text-sm">
+        {say}, {username || "Guest"}!
+      </span>
     </div>
   );
 };

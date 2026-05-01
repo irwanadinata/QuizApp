@@ -1,21 +1,34 @@
-## Quiz App
+# Quizzy - Modern Quiz Application 🎯
 
-![image](https://github.com/user-attachments/assets/caa2310e-4861-4d93-ad8a-222613549777)
+Quizzy is a highly interactive, beautifully designed web-based quiz application built with React and Tailwind CSS. It features a sleek glassmorphism aesthetic, smooth animations, and a seamless user experience.
 
-This Quiz App is an interactive platform that allows users to test their knowledge through various questions. This application was built using React and utilizes external APIs to get quiz questions.
+## ✨ Live Demo
+https://quiz-app-delta-tan.vercel.app/
 
-## Feature
+## ✨ Features
 
-- User login feature.
-- Fetch quiz questions from [Open Trivia Database](https://opentdb.com/).
-- Displays a timer for all quizzes that is not reset when switching questions.
-- Displays quiz results which include the number of correct, incorrect answers and total questions.
-- Save user usernames in Local Storage.
+- **Modern UI/UX**: Stunning glassmorphism design with a vibrant amber/yellow color scheme.
+- **Dark & Light Mode**: Fully responsive theme toggling with smooth.
+- **Engaging Animations**: Powered by Framer Motion for buttery-smooth page transitions, hover effects, and interactive elements.
+- **Dynamic Quiz Engine**: Fetches questions via API, randomizes answer choices, and calculates scores on the fly.
+- **Live Progress & Timer**: Includes a dynamic progress bar and a visual countdown timer for each quiz session.
+- **Interactive Results**: Displays an animated SVG donut chart to showcase the final score and detailed statistics.
 
-## Technology Used
+## 🛠️ Tech Stack
 
-- **React**: JavaScript library for building user interfaces.
-- **React Countdown**: Used to count down the time during a quiz.
-- **Axios**: Used to make HTTP requests to the API to get quiz questions.
-- **Tailwind CSS**: CSS framework for responsive and modern application styling.
-- **Open Trivia Database API**: Source for getting quiz questions.
+- **Framework**: React 18 + Vite
+- **Routing**: React Router DOM
+- **Styling**: Tailwind CSS (with custom keyframe animations and dark mode support)
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Data Fetching**: Axios (connects to Open Trivia Database API)
+- **Utilities**: `react-countdown` for the timer and `react-spinners` for elegant loading states.
+
+## 📂 Project Structure
+
+- `src/components/` - Reusable UI components (`Question`, `Result`, `ThemeToggle`, `UsernameDisplay`, etc.)
+- `src/pages/` - Main application views (`Login`, `Quiz`)
+- `src/context/` - Global state management (e.g., `ThemeContext` for Dark/Light mode)
+- `src/utils/` - Helper functions and API configurations
+- `src/styles/` - Global CSS and custom Tailwind classes
+- `public/` - Static assets
