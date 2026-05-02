@@ -1,16 +1,21 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Sparkles, ArrowRight } from "lucide-react";
+import { ArrowRight, Trophy } from "lucide-react";
 import ThemeToggle from "../components/theme-toggle";
 
 const Login = () => {
   const [username, setUsername] = useState("");
+  const [error, setError] = useState("");
   const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
-    if (!username.trim()) return;
+    if (!username.trim()) {
+      setError("Name must be filled in");
+      return;
+    }
+    setError("");
     localStorage.setItem("username", username);
     navigate("/quiz");
   };
@@ -33,7 +38,7 @@ const Login = () => {
         <div className="bg-white/60 dark:bg-white/10 backdrop-blur-xl border border-slate-200 dark:border-white/20 p-8 rounded-3xl shadow-2xl transition-colors duration-500">
           <div className="flex justify-center mb-6">
             <div className="bg-amber-100 dark:bg-amber-500/20 p-3 rounded-2xl border border-amber-200 dark:border-amber-500/30 transition-colors duration-500">
-              <Sparkles className="w-8 h-8 text-amber-500 dark:text-amber-400" />
+              <Trophy className="w-8 h-8 text-amber-500 dark:text-amber-400" />
             </div>
           </div>
 
@@ -52,11 +57,22 @@ const Login = () => {
               <input
                 type="text"
                 value={username}
-                onChange={(e) => setUsername(e.target.value)}
+                onChange={(e) => {
+                  setUsername(e.target.value);
+                  if (error) setError("");
+                }}
                 placeholder="Your Name"
-                className="w-full bg-white dark:bg-slate-900/50 border border-slate-300 dark:border-white/10 rounded-xl px-4 py-3 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-amber-500 transition-all duration-500"
-                required
+                className={`w-full bg-white dark:bg-slate-900/50 border ${error ? 'border-red-500 dark:border-red-500/50 focus:ring-red-500' : 'border-slate-300 dark:border-white/10 focus:ring-amber-500'} rounded-xl px-4 py-3 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 transition-all duration-500`}
               />
+              {error && (
+                <motion.p 
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="text-red-500 dark:text-red-400 text-sm mt-2 ml-1"
+                >
+                  {error}
+                </motion.p>
+              )}
             </div>
 
             <motion.button
