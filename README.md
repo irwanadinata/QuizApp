@@ -2,7 +2,7 @@
 
 Quizzy is a highly interactive, beautifully designed web-based quiz application built with React and Tailwind CSS. It features a sleek glassmorphism aesthetic, smooth animations, and a seamless user experience.
 
-## ✨ Live Demo
+## ❤️ Live Demo
 https://quiz-app-delta-tan.vercel.app/
 
 <img width="1916" height="1024" alt="image" src="https://github.com/user-attachments/assets/05571520-ba49-47b1-91e3-2015e088d1ed" />
