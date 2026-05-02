@@ -5,6 +5,9 @@ Quizzy is a highly interactive, beautifully designed web-based quiz application 
 ## ✨ Live Demo
 https://quiz-app-delta-tan.vercel.app/
 
+<img width="1916" height="1024" alt="image" src="https://github.com/user-attachments/assets/05571520-ba49-47b1-91e3-2015e088d1ed" />
+
+
 ## ✨ Features
 
 - **Modern UI/UX**: Stunning glassmorphism design with a vibrant amber/yellow color scheme.
